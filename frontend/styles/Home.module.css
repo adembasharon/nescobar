@@ -1,0 +1,470 @@
+/* NAV */
+.navContainer {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 7em;
+}
+.navContainer p {
+  color: #ffff;
+}
+.navLinks {
+  display: flex;
+  justify-content: space-between;
+  gap: 4em;
+  cursor: pointer;
+}
+.NavIcons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+}
+.navLogo {
+  cursor: pointer;
+}
+.navContainer img {
+  cursor: pointer;
+}
+
+/* subNav */
+.subNav {
+  background-color: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 2em;
+}
+
+/* hero carousel */
+.carousel-control-prev-icon {
+  color: black;
+}
+.HeroCartegories {
+  width: 80%;
+  margin: auto;
+  margin-top: 1.5em;
+}
+.HeroCartegories img {
+  border-radius: 5px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px black;
+}
+
+/* MAIN */
+/* .mainContainer {
+   background-image: url("../public/images/equip.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 80vh;
+} */
+ .video {  
+   object-fit: contain;   
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; 
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 auto;
+
+} 
+.sliddinImages{
+  position: relative;
+}
+
+/* HERO BLOG */
+.heroblog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.herosec p {
+  width: 50%;
+}
+.heroBlogPost h1 {
+  text-align: center;
+  margin: 1em 0;
+}
+.heroBlogPost {
+  margin: 0;
+}
+.heroBlogPost button {
+  padding: 0.4em 0.7em;
+  display: flex;
+  justify-content: center;
+  text-align: center !important;
+  color: yellow;
+  background-color: #1b3219;
+  border-radius: 4px;
+  font-size: 1.3rem;
+}
+
+.mainDes {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainDes ul {
+  color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  gap: 1em;
+}
+.mainDes ul li {
+  list-style-type: none;
+}
+.mainDes p {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  justify-content: center;
+  width: 60%;
+  line-height: 1.5em;
+}
+
+/* FOOTER */
+.footerCont {
+  background-color: black;
+  margin: auto;
+}
+.footerContainer {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  font-size: 1.3rem;
+  line-height: 1.2em;
+  width: 80%;
+  margin: auto;
+}
+.footerContainer p {
+  font-size: 1.4rem;
+}
+.footerContainer ul {
+  list-style-type: none;
+  margin-top: 1em;
+}
+.copy {
+  text-align: center;
+  color: white;
+  padding-bottom: 0.4em;
+}
+.copy span {
+  color: red;
+  align-items: center;
+}
+
+/* DJ */
+.djNav {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+.djNav p {
+  color: yellow;
+  font-size: 4rem;
+  width: 60%;
+  font-family: "Cookie", cursive;
+  text-align: center;
+}
+
+.djforHire {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.djforHire h2 {
+  font-size: 4rem;
+}
+.djforHire p {
+  font-size: 2rem;
+  width: 50%;
+  margin: 1em 0;
+}
+.djforHire button {
+  padding: 0.5em 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: yellow;
+  background-color: #1b3219;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+}
+.djImg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4em;
+  justify-content: center;
+  margin: 0 auto;
+  margin: 1em 0;
+}
+.img {
+  position: relative;
+  -moz-transition: all 5s ease-in;
+  -webkit-transition: all 5s ease-in;
+  transition: all 5s ease-in;
+}
+.desimg {
+  background: rgba(0, 0, 0, 0.5);
+  color: yellow;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.img:hover .desimg {
+  visibility: visible;
+}
+
+/* BLOG */
+.background {
+  background-image: url("../public/images/politics.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+.blogItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.blogItems p {
+  width: 100%;
+}
+.blogItems button {
+  padding: 0.5em 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: yellow;
+  background-color: #1b3219;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+}
+.blogItems h2 {
+  font-size: 1.7rem;
+}
+
+.blogContent {
+  width: 30%;
+  margin-top: 1em;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 250px;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.formdetails{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+  margin: auto;
+  padding: 0;
+}
+
+
+/* SUPERMODEL */
+.superNav {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.superimg {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.superContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}
+.superContent p {
+  font-size: 1.5rem;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.superContent button {
+  padding: 0.5em 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: yellow;
+  background-color: #1b3219;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+}
+
+.textImg {
+  flex: 1;
+}
+.text {
+  flex: 1;
+}
+.superImages {
+  background-color: #1b3219;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  margin-bottom: 1em;
+}
+.singleimg {
+  height: 300px;
+}
+
+/* FORM */
+.formContent {
+  width: 100%;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  gap: 2em;
+}
+.formContainer button {
+  padding: 0.5em 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: yellow;
+  background-color: #1b3219;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+}
+.formLabel input {
+  border-radius: 4px;
+  padding: 0.3em 2em;
+}
+.selectItem {
+  border-radius: 4px;
+  padding: 0.4em 2.3em;
+}
+.formLabel {
+  display: flex;
+  flex-direction: column;
+}
+.loginContainer {
+  width: 100%;
+}
+
+.loginform {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+}
+.loginContainer button {
+  padding: 0.5em 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: yellow;
+  background-color: #1b3219;
+  border-radius: 4px;
+  font-size: 1.3rem;
+}
+.loginContainer input {
+  border-radius: 4px;
+  padding: 0.3em 2em;
+}
+.checkbox {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGIN */
+.loginspan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.loginSpanItem {
+  display: block;
+  color: red;
+  text-align: center;
+}
+
+/* RESPONSIVENESS */
+/* djpage */
+@media (width: 768px), (width: 414px) {
+  .footerContainer {
+    font-size: 0.7rem;
+  }
+  /* .djImg{
+         flex-wrap: wrap; 
+    }  */
+}

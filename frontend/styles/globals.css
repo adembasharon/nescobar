@@ -1,0 +1,61 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Concert One', cursive;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Concert One', cursive;
+}
+
+.carousel-item{
+  width: 100%; 
+  height: 100%;  
+  /* border: 5PX solid red; */
+}
+.carousel-itemOne img{
+  width: 100%;
+  height: 100%;
+  border: 2px solid purple;
+
+  object-fit: contain;
+}
+.carousel-innerOne{
+  width:400px;
+  height: 400px;
+  margin: 0;
+}
+.carousel{
+  display: flex;
+  /* background-color: green; */
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+a{
+  color:"red"
+}
+
+.singlePost{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  flex-direction: column;
+  font-size: 2rem;
+  
+}
+

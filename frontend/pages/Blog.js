@@ -3,7 +3,6 @@ import Footer from "./Footer";
 import Nav from "./Nav";
 import styles from "../styles/Home.module.css";
 import axios from 'axios';
-// import { useRouter } from 'next/router'
 import Link from "next/link";
 
 

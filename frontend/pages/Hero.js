@@ -15,6 +15,9 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import homeOne from "../public/images/blog5.jpg"
+import homeTwo from "../public/images/blog4.jpg"
+import homeThree from "../public/images/blog3.jpg"
 
 
 
@@ -124,8 +127,8 @@ const settings={
 
       <div className={styles.heroBlogPost}>
 <h1>Latest blog posts</h1>
-<div className={styles.heroblog}>
-        {
+<div class="heroblog">
+        {/* {
           HomepageBlog.map(item => {
             return (
               <div className={styles.herosec}>
@@ -137,15 +140,67 @@ const settings={
 
             )
           })
-        }
+        } */}
 
+<div class="homepageBlogContainer">
+<div>
+<div>
+  <Image src={homeOne} width={350} height={350}/>
+</div>
+<div>
+  <h2>Waste at slum  </h2>
+</div>
+<div>
+  <p>It's only in Kibra where you find creative and innovative minds....</p>
+</div>
+<div>
+  <Link href="/blog1">
+    <button>Continue reading</button>
+    </Link>
+
+</div>
 </div>
 
 
+<div>
+<div>
+  <Image src={homeTwo} width={350} height={350}/>
+</div>
+<div>
+  <h2>Young super talent </h2>
+</div>
+<div>
+  <p>He goes by the name Red Pro Fate but some people call him Dimore...</p>
+</div>
+<div>
+  <Link href="/blog2">
+<button>Continue reading</button>
+</Link>
+</div>
 </div>
 
 
 
+<div>
+<div>
+  <Image src={homeThree} width={350} height={350}/>
+</div>
+<div>
+  <h2>Mentor Adera Betty </h2>
+</div>
+<div>
+  <p>Adera betty is one of the most loved women in the society...</p>
+</div>
+<div>
+  <Link href="/blog3">
+<button>Continue reading</button>
+</Link>
+</div>
+</div>
+
+</div>
+</div>
+</div>
     </div>
 
   )

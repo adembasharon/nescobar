@@ -37,7 +37,12 @@ he is concidered as a super model.
 </Link>
 <h3>Watch Nesco in action</h3>
 
-<Image src={video} width={30} height={30}/>
+<Link href="https://www.youtube.com/watch?v=m1SUqvw7Djs">
+    <a target="_blank">
+        <Image style={{cursor:"pointer"}} src={video} width={30} height={30}/>
+        </a>
+
+</Link>
 
 </div>
 </div>

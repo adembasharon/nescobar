@@ -372,6 +372,25 @@
   height: 300px;
 }
 
+.carousel button{
+  padding: 0.5em 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: yellow;
+  background-color: #1b3219;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+}
+.btn{
+display: flex;
+justify-content: space-between;
+}
+
+
 /* FORM */
 .formContent {
   width: 100%;

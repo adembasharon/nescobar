@@ -34,7 +34,7 @@ const postId = ({ item }) => {
 
     return (
         <div className="singlePost">
-            <img src={item.postImage} />
+            <img src={item.postImage}  width={270} height={270}/>
             <h2>{item.postTitle}</h2>
             <p>{item.postSubtitle}</p>
             <p style={{width:"60%"}}>{item.postDescription}</p>

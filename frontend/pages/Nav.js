@@ -53,9 +53,9 @@ return(
     </Link>
     </div>
     <div>
-        {/* <Link href="/about"> */}
+         <Link href="/About"> 
         <a target="_blank"><p>Who's Nesco</p></a>
-        {/* </Link> */}
+         </Link> 
     </div>
 </div>
 </div>

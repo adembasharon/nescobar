@@ -20,8 +20,7 @@ export default function Blog() {
 
     console.log(details)
 
-
-
+   
     return (
         <div>
             <Nav />

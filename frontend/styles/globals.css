@@ -2,12 +2,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Concert One', cursive;
+  /* font-family: 'Concert One', cursive; */
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 button{
@@ -17,27 +17,34 @@ button{
 }
 * {
   box-sizing: border-box;
-  font-family: 'Concert One', cursive;
+  font-family: 'Concert One', cursive !important;
 }
+/* .carousel-inner{
+  width:100% !important;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+} */
 
 .carousel-item{
-  width: 100%; 
+  /* width: 100% !important;  */
   height: 100%;  
   /* border: 5PX solid red; */
 }
 .carousel-itemOne img{
   width: 100%;
   height: 100%;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
 
   object-fit: contain;
 }
 .carousel-innerOne{
-  width:400px;
+  width:400px !important;
   height: 400px;
-  margin: 0;
+  /* margin-left: 500px; */
 }
 .carousel{
+  /* position: relative !important; */
   display: flex;
   /* background-color: green; */
   align-items: center;

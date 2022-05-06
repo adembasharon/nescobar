@@ -1,3 +1,4 @@
+
 export const getStaticPaths = async () => {
     const res = await fetch("https://thawing-headland-59245.herokuapp.com/api/post/");
     const data = await res.json()

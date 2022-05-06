@@ -15,6 +15,7 @@ const Login = () => {
         password: ""
     })
 
+
     const [loginMessage, setLoginMessage] = useState("")
     const [validationMessage, setValidationMessage] = useState({
         username: "",
@@ -63,24 +64,24 @@ const Login = () => {
                     setCurrenUser(result.username)
                     router.push(
                         {
-                            pathname: "/dashbord/admin",
+                            pathname: "/admin/dashbord",
                             query: { name: currentUser }
                         })
                     console.log(currentUser)
 
                 } else {
-                    // console.log("User does not exist")
                     setLoginMessage("Invalid credentials")
 
-                    // setCurrenUser("User does not exist")
                 }
-                // console.log(result.username)
             }
         } catch (error) {
             console.log(error.status)
         }
     }
-
+    
+useEffect(()=>{
+    localStorage.setItem("user",JSON.stringify(user))
+},[user])
 
 
     return (
@@ -88,7 +89,7 @@ const Login = () => {
         <div className={styles.loginContainer}>
             <form className={styles.loginform}>
                 <div className={styles.loginspan}>
-                    <p style={{ textAlign: "center", color: "yellow", fontSize: "2rem" }} >{loginMessage}</p>
+                    <p style={{ textAlign: "center", color: "red", fontSize: "2rem" }} >{loginMessage}</p>
                     <div>
                         <span className={styles.loginSpanItem}>{validationMessage.username}</span>
                     </div>

@@ -33,10 +33,18 @@
 .subNav {
   background-color: #808080;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
   gap: 0 2em;
+ 
 }
+/* .subNavContainer{
+  position: fixed;
+  top: 0;
+margin-bottom: 2em;
+  z-index: 1;
+   width: 100%; 
+} */
 
 /* hero carousel */
 .carousel-control-prev-icon {
@@ -74,6 +82,12 @@
 } 
 .sliddinImages{
   position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; */
+  
+
 }
 
 /* HERO BLOG */

@@ -28,7 +28,11 @@ export default function Home() {
 
       </Head>
       <Nav />
+      {/* <div style={{marginTop:33}}> */}
+      <div>
       <Main />
+      </div>
+
       <Hero />
       <Footer />
     </div>

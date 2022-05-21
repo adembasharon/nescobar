@@ -4,6 +4,7 @@ import React, {useEffect} from "react"
 import Home from './index'
 import Supermodel from './Supermodel'
 import "bootstrap/dist/css/bootstrap.css";
+import {AppWrapper} from '../public/images/src/state';
 
 
 function MyApp({ Component, pageProps }) {
@@ -11,11 +12,12 @@ function MyApp({ Component, pageProps }) {
     import("bootstrap/dist/js/bootstrap");
   }, []);
   return (
+    <AppWrapper>
    <Component
    {...pageProps}
    />
 
-   
+</AppWrapper>
   )
 }
 

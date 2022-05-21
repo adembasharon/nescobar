@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const Dj = () => {
     return (
-        <div>
+        <div style={{fontFamily: 'Concert One'}}>
             <Nav />
 
             <div className={styles.djNav}>

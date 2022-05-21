@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  /* font-family: 'Concert One', cursive; */
+  font-family: 'Concert One', cursive;
 }
 
 a {
@@ -17,7 +18,7 @@ button{
 }
 * {
   box-sizing: border-box;
-  font-family: 'Concert One', cursive !important;
+  /* font-family: 'Concert One', cursive !important; */
 }
 /* .carousel-inner{
   width:100% !important;

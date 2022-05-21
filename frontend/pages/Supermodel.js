@@ -9,7 +9,7 @@ import SuperModelMain from "./SuperModelMain";
 
 const Supermodel = () => {
     return (
-        <div>
+        <div style={{fontFamily: 'Concert One'}}>
             <Nav/>
 
             <div className={styles.superNav}>

@@ -8,12 +8,16 @@ import Link from "next/link";
 
 export default function Blog() {
         const [details, setDetails] = useState([])
+        // https://bcc5-102-6-65-141.ngrok.io/api/post/
     const url = 'https://thawing-headland-59245.herokuapp.com/api/post/'
 
     useEffect(() => {
         axios.get(url)
             .then((res) => {
                 setDetails(res.data)
+            })
+            .catch(err=>{
+                console.log(err)
             })
 
     }, [url])
@@ -22,7 +26,7 @@ export default function Blog() {
 
    
     return (
-        <div>
+        <div style={{fontFamily: 'Concert One'}}>
             <Nav />
             <div className={styles.background}>
             </div>

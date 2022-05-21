@@ -78,6 +78,7 @@ const Booking = () => {
                         <option>Choose a cartegory</option>
                         <option> Dj Nesco for event</option>
                         <option> Nesco for modeling</option>
+                        <option>Write blog</option>
                     </select>
                 </div>
 

@@ -27,6 +27,7 @@ export default function Home() {
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 
       </Head>
+      <div style={{fontFamily: 'Concert One'}}>
       <Nav />
       {/* <div style={{marginTop:33}}> */}
       <div>
@@ -35,6 +36,7 @@ export default function Home() {
 
       <Hero />
       <Footer />
+    </div>
     </div>
   )
 }

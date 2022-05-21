@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import styles from "../../styles/Home.module.css";
 import axios from "axios";
 import Link from "next/link"
-
+import AppContext from "../../public/images/src/state"
+import dynamic from "next/dynamic"
+import "suneditor/dist/css/suneditor.min.css";
 
 
 const dashbord = () => {
@@ -17,8 +19,34 @@ const dashbord = () => {
         postDescription: "",
         postCartegory: ""
     })
+
+
+    // EDITOR
+const SunEditor=dynamic(()=>import("suneditor-react"),{
+    ssr:false,
+});
+
+
+
+
+    const [currentUser, setCurrentUser] = useContext(AppContext)
+
+    useEffect(()=>{
+        const user= localStorage.getItem("loggedInUser")
+        
+            setCurrentUser(JSON.parse(user))
+        
+
+
+    },[])
+
+
+
+
     const [details, setDetails] = useState([])
     const url = 'https://thawing-headland-59245.herokuapp.com/api/post/'
+    // https://bcc5-102-6-65-141.ngrok.io/api/post/
+     
 
     // const postDetails =
      useEffect(() => {
@@ -29,14 +57,31 @@ const dashbord = () => {
         .then((res) => {
             setDetails(res.data)
         })
+        .catch((err)=>{
+console.log(err)
+        })
 
     useEffect(() => {
         localStorage.setItem("details", JSON.stringify(details))
     }, [details])
 
-    const detail = (_id) => {
-        localStorage.removeItem(setDetails(details.filter(item => item._id !== _id)))
-       window.localStorage.clear();
+
+    const detail = async (id) => {
+       const data = JSON.parse(localStorage.getItem("details"));
+       const dataId = data.indexOf(data.find(item=>item._id === id))
+       data.splice(dataId,1);
+       setDetails([...data]);
+       localStorage.setItem("details",JSON.stringify(details))
+
+        const deletedItem = await fetch(`https://thawing-headland-59245.herokuapp.com/api/post/${id}`,{
+           method:"DELETE",
+           headers:{
+               "token":`Bearer ${currentUser[0].accessToken}`
+           }
+       })
+ console.log(await deletedItem.json())
+ console.log(currentUser[0].accessToken)
+       
     }
 
 const edit=()=>{
@@ -77,7 +122,7 @@ const edit=()=>{
 
     const submitForm = async (e) => {
         e.preventDefault()
-        const url = "https://thawing-headland-59245.herokuapp.com/api/post/new"
+        const url = " https://thawing-headland-59245.herokuapp.com/api/post/new"
         const options = {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -141,7 +186,8 @@ const edit=()=>{
                                         <input type="text" placeholder="Subtitle" onChange={e => setFormInput({ ...formInput, postSubtitle: e.target.value })} />
                                     </div>
                                     <div>
-                                        <textarea onChange={e => setFormInput({ ...formInput, postDescription: e.target.value })}></textarea>
+                                        <SunEditor/>
+                                        {/* <textarea onChange={e => setFormInput({ ...formInput, postDescription: e.target.value })}></textarea> */}
                                     </div>
                                     <select onChange={e => setFormInput({ ...formInput, postCartegory: e.target.value })}>
                                         <option>Homepage</option>
@@ -149,6 +195,11 @@ const edit=()=>{
                                     </select>
 
                                 </div>
+
+
+
+
+
                             </form>
 
                         </div>

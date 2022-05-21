@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useSelector } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from 'next/router';
 import styles from "../../styles/Home.module.css";
+import AppContext from "../../public/images/src/state";
 // import Typography from '@mui/material/Typography';
 // import Card from '@mui/material/Card';
 // import CardContent from '@mui/material/CardContent';
@@ -10,10 +11,13 @@ import styles from "../../styles/Home.module.css";
 
 const Login = () => {
 
+    const [currentUser, setCurrentUser] = useContext(AppContext)
+
     const [user, setUser] = useState({
         username: "",
         password: ""
     })
+
 
 
     const [loginMessage, setLoginMessage] = useState("")
@@ -28,7 +32,6 @@ const Login = () => {
     })
 
 
-    const [currentUser, setCurrenUser] = useState('');
 
     const router = useRouter();
     const handleSubmit = async e => {
@@ -57,17 +60,18 @@ const Login = () => {
                 }
 
                 )
-                    .catch(err => console.log('err'))
+                    .catch(err => console.log(err))
                 const result = await data.json();
+                localStorage.setItem("loggedInUser",JSON.stringify([result]))
                 console.log(result)
                 if (result.username !== undefined) {
-                    setCurrenUser(result.username)
+                    setCurrentUser(result.username)
                     router.push(
                         {
                             pathname: "/admin/dashbord",
                             query: { name: currentUser }
                         })
-                    console.log(currentUser)
+                    // console.log(currentUser)
 
                 } else {
                     setLoginMessage("Invalid credentials")
@@ -75,7 +79,7 @@ const Login = () => {
                 }
             }
         } catch (error) {
-            console.log(error.status)
+            console.log(error)
         }
     }
     

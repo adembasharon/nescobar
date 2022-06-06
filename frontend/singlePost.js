@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const singleProduct=()=>{
     const [singlePost , setSinglePost]=useState([])
-const url = 'https://thawing-headland-59245.herokuapp.com/api/post/find/'
+const url = 'http://localhost:5000/api/post/find/'
 useEffect(() => {
     axios.get(url)
         .then((res) => {

@@ -21,7 +21,7 @@ const Booking = () => {
         e.preventDefault();
 
 
-        const data = await fetch("https://thawing-headland-59245.herokuapp.com/api/booking", {
+        const data = await fetch("http://localhost:5000/api/booking", {
             method: "POST",
             mode: "cors",
             headers: {

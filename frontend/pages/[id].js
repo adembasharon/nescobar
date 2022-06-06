@@ -1,6 +1,6 @@
 
 export const getStaticPaths = async () => {
-    const res = await fetch("https://thawing-headland-59245.herokuapp.com/api/post/");
+    const res = await fetch("http://localhost:5000/api/post/");
     const data = await res.json()
 
 
@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id;
-    const res = await fetch("https://thawing-headland-59245.herokuapp.com/api/post/find/" + id)
+    const res = await fetch("http://localhost:5000/api/post/find/" + id)
     const data = await res.json()
     
     return {

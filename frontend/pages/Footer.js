@@ -12,6 +12,7 @@ const Footer = ()=>{
 
 <div>
 <ul>
+    <h1 style={{color:"yellow"}}>Links</h1>
     
     <li>
     <Link href="/Dj">
@@ -34,14 +35,16 @@ const Footer = ()=>{
 
 <div>
     <ul>
+        <h1 style={{color:"yellow"}}>Contact</h1>
         <li>+254 719 149 291</li>
         <li>lorinesotile@gmail.com</li>
+        <li>Nairobi,Kenya</li>
     </ul>
 </div>
 
         </div>
         <div className={styles.copy}>
-            <p>&copy;2022 AllRights reserved || crafted with  <span>&hearts;</span> Ademba Sharon</p>
+            <p>&copy;2022 AllRights reserved || crafted with  <span>&hearts;</span><Link href="/me"> Ademba Sharon</Link></p>
         </div>
         </div>
     )

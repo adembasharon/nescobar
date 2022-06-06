@@ -16,7 +16,7 @@ export default function Dispalay() {
     // })
 
         const [details, setDetails] = useState([])
-    const url = 'https://thawing-headland-59245.herokuapp.com/api/post/'
+    const url = 'http://localhost:5000/api/post/'
 
     useEffect(() => {
         axios.get(url)
@@ -31,7 +31,7 @@ export default function Dispalay() {
 
     const postDelete=async (e)=>{
         e.preventDefault()
-        const url = "https://thawing-headland-59245.herokuapp.com/api/post/id"
+        const url = "http://localhost:5000/api/post/id"
         const options = {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
@@ -79,7 +79,6 @@ export default function Dispalay() {
 
 
 
-            {/* <Footer /> */}
         </div>
     )
 }

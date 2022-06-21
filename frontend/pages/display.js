@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 // import Footer from "./Footer";
 // import Nav from "./Nav";
 import styles from "../styles/Home.module.css";
 import axios from 'axios';
 import Link from "next/link";
+import AppContext from "../public/images/src/state";
 
 
 export default function Dispalay() {
@@ -15,18 +16,14 @@ export default function Dispalay() {
     //     postCartegory:""
     // })
 
-        const [details, setDetails] = useState([])
-    const url = 'http://localhost:5000/api/post/'
+    const {userState, postsState} = useContext(AppContext)
+    const [currentUser, setCurrentUser] = userState
+    const [posts, setPosts] = postsState
+    
 
-    useEffect(() => {
-        axios.get(url)
-            .then((res) => {
-                setDetails(res.data)
-            })
+    
 
-    }, [url])
-
-    console.log(details)
+    console.log(posts)
 
 
     const postDelete=async (e)=>{
@@ -54,7 +51,7 @@ export default function Dispalay() {
         <div>
             <div className={styles.blogItems}>
 
-                {details.map(item => (
+                {posts.map(item => (
                    
                     <div className={styles.blogContent} key={item.id}>
                         <div className={styles.imgContainer}>

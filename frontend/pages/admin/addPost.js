@@ -19,21 +19,13 @@ const AddPost=()=>{
 
 
 
-    const [details, setDetails] = useState([])
-    const url = 'http://localhost:5000/api/post/'
+    
+    const {userState, postsState} = useContext(AppContext)
+    const [currentUser, setCurrentUser] = userState
+    const [posts, setPosts] = postsState
+    
 
-    useEffect(() => {
-        getPosts()
-    }, [])
-
-    const getPosts = () => axios.get(url)
-        .then((res) => {
-            setDetails(res.data)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-
+    
     const SunEditor = dynamic(() => import("suneditor-react"), {
         ssr: false,
     });

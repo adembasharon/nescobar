@@ -1,6 +1,7 @@
 /* NAV */
 .navContainer {
-  background-color: black;
+  background: rgb(131,58,180);
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1em;
-  align-items: center;
+  justify-content: center;
 }
 .navLogo {
   cursor: pointer;
@@ -31,21 +32,17 @@
 
 /* subNav */
 .subNav {
-  background-color: #808080;
+  background-color: rgb(233, 212, 212);
   display: flex;
   align-items: center !important;
   justify-content: center !important;
   gap: 0 2em;
  
 }
-/* .subNavContainer{
-  position: fixed;
-  top: 0;
-margin-bottom: 2em;
-  z-index: 1;
-   width: 100%; 
-} */
-
+.subNav button{
+margin: 1em 0;
+border-radius: 4px;
+}
 /* hero carousel */
 .carousel-control-prev-icon {
   color: black;
@@ -62,13 +59,7 @@ margin-bottom: 2em;
 }
 
 /* MAIN */
-/* .mainContainer {
-   background-image: url("../public/images/equip.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  height: 80vh;
-} */
+
  .video {  
    object-fit: contain;   
   min-width: 100%;
@@ -82,12 +73,6 @@ margin-bottom: 2em;
 } 
 .sliddinImages{
   position: relative;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto; */
-  
-
 }
 
 /* HERO BLOG */
@@ -110,16 +95,7 @@ margin-bottom: 2em;
 .heroBlogPost {
   margin: 0;
 }
-.heroBlogPost button {
-  padding: 0.4em 0.7em;
-  display: flex;
-  justify-content: center;
-  text-align: center !important;
-  color: yellow;
-  background-color: #1b3219;
-  border-radius: 4px;
-  font-size: 1.3rem;
-}
+
 
 .mainDes {
   background-color: black;
@@ -215,19 +191,7 @@ margin-bottom: 2em;
   width: 50%;
   margin: 1em 0;
 }
-.djforHire button {
-  padding: 0.5em 0.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  color: yellow;
-  background-color: #1b3219;
-  border-radius: 4px;
-  font-size: 1.3rem;
-  margin-bottom: 1em;
-}
+
 .djImg {
   display: flex;
   flex-direction: row;
@@ -236,6 +200,8 @@ margin-bottom: 2em;
   justify-content: center;
   margin: 0 auto;
   margin: 1em 0;
+
+
 }
 .img {
   position: relative;
@@ -270,29 +236,24 @@ margin-bottom: 2em;
   background-size: cover;
   height: 80vh;
 }
+.blogItemContainer{
+  width: 80%;
+  margin: 0 auto;
+}
 .blogItems {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* margin: auto; */
   gap: 1em;
+  width: 100%;
+
   flex-wrap: wrap;
 }
 .blogItems p {
   width: 100%;
 }
-.blogItems button {
-  padding: 0.5em 0.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  color: yellow;
-  background-color: #1b3219;
-  border-radius: 4px;
-  font-size: 1.3rem;
-  margin-bottom: 1em;
-}
+
 .blogItems h2 {
   font-size: 1.7rem;
 }
@@ -354,19 +315,7 @@ margin-bottom: 2em;
   width: 80%;
   margin: auto;
 }
-.superContent button {
-  padding: 0.5em 0.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  color: yellow;
-  background-color: #1b3219;
-  border-radius: 4px;
-  font-size: 1.3rem;
-  margin-bottom: 1em;
-}
+
 
 .textImg {
   flex: 1;
@@ -375,30 +324,17 @@ margin-bottom: 2em;
   flex: 1;
 }
 .superImages {
-  background-color: #1b3219;
+  background-color:  rgb(233, 212, 212);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4em;
-  margin-bottom: 1em;
 }
 .singleimg {
   height: 300px;
 }
 
-.carousel button{
-  padding: 0.5em 0.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  color: yellow;
-  background-color: #1b3219;
-  border-radius: 4px;
-  font-size: 1.3rem;
-  margin-bottom: 1em;
-}
+
 .btn{
 display: flex;
 justify-content: space-between;
@@ -418,19 +354,7 @@ justify-content: space-between;
   margin: auto;
   gap: 2em;
 }
-.formContainer button {
-  padding: 0.5em 0.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  color: yellow;
-  background-color: #1b3219;
-  border-radius: 4px;
-  font-size: 1.3rem;
-  margin-bottom: 1em;
-}
+
 .formLabel input {
   border-radius: 4px;
   padding: 0.3em 2em;
@@ -456,18 +380,7 @@ justify-content: space-between;
   gap: 2em;
   justify-content: center;
 }
-.loginContainer button {
-  padding: 0.5em 0.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  color: yellow;
-  background-color: #1b3219;
-  border-radius: 4px;
-  font-size: 1.3rem;
-}
+
 .loginContainer input {
   border-radius: 4px;
   padding: 0.3em 2em;
@@ -492,12 +405,18 @@ justify-content: space-between;
 }
 
 /* RESPONSIVENESS */
-/* djpage */
 @media (width: 768px), (width: 414px) {
   .footerContainer {
     font-size: 0.7rem;
   }
-  /* .djImg{
-         flex-wrap: wrap; 
-    }  */
+ 
+}
+
+.modalItem{
+  justify-content: space-between;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-direction: row;
 }

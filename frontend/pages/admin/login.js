@@ -15,7 +15,8 @@ import "suneditor/dist/css/suneditor.min.css";
 
 const Login = () => {
 
-    const [currentUser, setCurrentUser] = useContext(AppContext)
+    const {userState, postsState} = useContext(AppContext)
+    const [currentUser, setCurrentUser] = userState
 
     const [user, setUser] = useState({
         username: "",

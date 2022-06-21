@@ -12,7 +12,7 @@ const Footer = ()=>{
 
 <div>
 <ul>
-    <h1 style={{color:"yellow"}}>Links</h1>
+    <h3 style={{color:"yellow"}}>Links</h3>
     
     <li>
     <Link href="/Dj">
@@ -35,7 +35,7 @@ const Footer = ()=>{
 
 <div>
     <ul>
-        <h1 style={{color:"yellow"}}>Contact</h1>
+        <h3 style={{color:"yellow"}}>Contact</h3>
         <li>+254 719 149 291</li>
         <li>lorinesotile@gmail.com</li>
         <li>Nairobi,Kenya</li>

@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const Dj = () => {
     return (
-        <div style={{fontFamily: 'Concert One'}}>
+        <div style={{fontFamily: 'Oswald'}}>
             <Nav />
 
             <div className={styles.djNav}>
@@ -31,7 +31,7 @@ const Dj = () => {
                 <h2>
                     Live Performing Dj
                 </h2>
-                <p>Dj Nesco perfoms in all events and different shows both indoor and outdoor events </p>
+                <p>Dj Nesco perfoms in different events and shows, both indoor and outdoor events. </p>
                 <Link href="/booking">
                 <button>Hire Me</button>
                 </Link>
@@ -49,7 +49,7 @@ const Dj = () => {
                     <div className={styles.img}>
                         <Image src={djslide2} width={350} height={350} objectFit="contain" />
                         <div className={styles.desimg}>
-                            <p>Dj Nesco bringing you fun in all places </p>
+                            <p>Dj Nesco brings you fun in all places </p>
                         </div>
 
                     </div>
@@ -57,7 +57,7 @@ const Dj = () => {
                     <div className={styles.img}>
                         <Image src={djslide3} width={350} height={350} objectFit="contain" />
                         <div className={styles.desimg}>
-                            <p>Happy hour wiith Dj Nesco.He is the baddest of the badest</p>
+                            <p>Happy hour with Dj Nesco.He is the baddest of the baddest</p>
                         </div>
                     </div>
                 </div>

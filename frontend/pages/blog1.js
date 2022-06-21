@@ -3,7 +3,7 @@ import Image from "next/image"
 import blog from "../public/images/blog5.jpg"
 const blog1=()=>{
 return(
-    <div class="blogID">
+    <div className="blogID">
         <div>
         <Image src={blog} width={250} height={250}/>
         </div>

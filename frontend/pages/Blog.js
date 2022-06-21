@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import styles from "../styles/Home.module.css";
 import axios from 'axios';
 import Link from "next/link";
-
+import AppContext from "../public/images/src/state";
 
 export default function Blog() {
-        const [details, setDetails] = useState([])
+
+    const {userState, postsState} = useContext(AppContext)
+    const [currentUser, setCurrentUser] = userState
+    const [posts, setPosts] = postsState
+
         // https://bcc5-102-6-65-141.ngrok.io/api/post/
     const url = ' http://localhost:5000/api/post/'
 
     useEffect(() => {
         axios.get(url)
             .then((res) => {
-                setDetails(res.data)
+                setPosts(res.data)
             })
             .catch(err=>{
                 console.log(err)
@@ -22,25 +26,25 @@ export default function Blog() {
 
     }, [url])
 
-    console.log(details)
+    console.log(posts)
 
    
     return (
-        <div style={{fontFamily: 'Concert One'}}>
+        <div style={{fontFamily: 'Oswald'}}>
             <Nav />
             <div className={styles.background}>
             </div>
             <h1 style={{ textAlign: "center", margin: "1em 0" }}>Blog Posts</h1>
-
+<div className={styles.blogItemContainer}>
             <div className={styles.blogItems}>
 
-                {details.map(item => (
+                {posts.map(item => (
                    
                     <div className={styles.blogContent} key={item.id}>
                         <div className={styles.imgContainer}>
                             <img src={item.postImage} />
                         </div>
-                        <h2>{item.postTitle}</h2>
+                        <h2 style={{fontWeight:"bold"}}>{item.postTitle}</h2>
                         <p>{item.postSubtitle}</p>
                         
                         <Link href={`${item._id}`}><button>Continue reading</button></Link>
@@ -48,7 +52,7 @@ export default function Blog() {
                     </div>
 
                 ))}
-
+</div>
 
             </div>
 

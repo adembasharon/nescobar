@@ -14,26 +14,7 @@ const EditPost=()=>{
         postSubtitle: "",
         postDescription: "",
         postCartegory: ""
-    })
-
-
-
-
-    const [details, setDetails] = useState([])
-    const url = 'http://localhost:5000/api/post/'
-
-    useEffect(() => {
-        getPosts()
-    }, [])
-
-    const getPosts = () => axios.get(url)
-        .then((res) => {
-            setDetails(res.data)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-
+    })    
     
     const editorRef = useRef(null);
 

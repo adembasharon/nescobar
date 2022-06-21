@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Concert One', cursive;
+  font-family: 'Oswald', sans-serif !important;
 }
 
 a {
@@ -12,51 +12,49 @@ a {
 }
 
 button{
-  font-family: 'Open Sans', sans-serif;
-  border: none;
+  font-family: 'Oswald', sans-serif !important;
+    border: none;
   cursor: pointer;
   padding: 0.4em 0.7em;
   display: flex;
   justify-content: center;
   text-align: center !important;
-  color: yellow;
-  background-color: #1b3219;
+  color: white;
+  background-color: #c74c6b;
   border-radius: 4px;
   font-size: 1.3rem;
-  border-radius: 4px;
+  border-radius: 4px !important;
+}
+h1{
+  /* color: rgb(131,58,180); */
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nesco{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 * {
   box-sizing: border-box;
-  /* font-family: 'Concert One', cursive !important; */
 }
-/* .carousel-inner{
-  width:100% !important;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-} */
 
 .carousel-item{
-  /* width: 100% !important;  */
   height: 100%;  
-  /* border: 5PX solid red; */
 }
 .carousel-itemOne img{
   width: 100%;
   height: 100%;
-  /* border: 2px solid purple; */
 
   object-fit: contain;
 }
 .carousel-innerOne{
   width:400px !important;
   height: 400px;
-  /* margin-left: 500px; */
 }
 .carousel{
-  /* position: relative !important; */
   display: flex;
-  /* background-color: green; */
   align-items: center;
   justify-content: center;
   height: 80vh;
@@ -72,17 +70,23 @@ a{
   justify-content: center;
   width: 100%;
   flex-direction: column;
-  font-size: 2rem;
-  background-color: rgb(144, 149, 155);
+  font-size: 1.2rem;
   height: 100vh;
   
 }
+.single-post{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .description{
   width: 60%;
   font-size: 2rem;
   text-align: center;
   margin: auto;
 }
+
 .blogID{
   display: flex;
   align-items: center;
@@ -100,36 +104,32 @@ a{
   font-size: 2rem;
   margin: auto;
 }
+
+/* HOME BLOG CONTAINER */
 .homepageBlogContainer{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between; 
   align-items: center;
   margin: auto;
-  width: 80%;
-  margin-bottom: .7em;
+   width: 80%; 
+   margin-bottom: .7em; 
 }
-.homepageBlogContainer button{
-  padding: 0.4em 0.7em;
-  display: flex;
-  justify-content: center;
-  text-align: center !important;
-  color: yellow;
-  background-color: #1b3219;
-  border-radius: 4px;
-  font-size: 1.3rem;
-}
+
 .homepageBlogContainer p{
-  width: 90%;
+   width: 90%; 
+
 }
 
 .heroblog img{
-width: 100%;
-height: 100%;
+width: 100% ;
+height: 100% ;
 }
 .heroblog{
-  width: 100%;
+   width: 100%; 
 }
+
+ /* PROFILE */ 
 .me{
   display: flex;
   align-items: center;
@@ -139,4 +139,72 @@ height: 100%;
   margin-top: 1em;
   background-color: lightyellow;
   height: 100vh;
+}
+
+/* assap */
+
+.assap{
+  display: flex;
+  position: sticky;
+  top: 0;
+  gap: 2em;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 15px;
+  height: 80px;
+  border-bottom: 1px solid whitesmoke;
+  cursor: pointer;
+}
+.icon{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.avater :hover{
+opacity: 0.8;
+}
+.asapSearch{
+  display:flex;
+  align-items:center;
+  padding:20px;
+  border-radius:2px;
+}
+.textArea{
+  outline-width:0;
+  flex:1;
+  border:none;
+  width:80px;
+}
+.btn{
+  width:100%;
+  background-color:grey;
+border-top:1px solid whitesmoke;
+border-bottom:1px solid whitesmoke;
+
+  border:none;
+}
+/* order form */
+.oders{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: auto;
+  flex-direction:column;
+  gap:3em;
+}
+.OrderName{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4em;
+}
+
+.home-icon{
+  filter:brightness(0);
+  filter:invert(1);
+  display:block;
+  padding-right:1em !important;
 }

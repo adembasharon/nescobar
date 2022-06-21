@@ -30,7 +30,7 @@ export default function Home() {
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 
       </Head>
-      <div style={{fontFamily: 'Concert One'}}>
+      <div style={{fontFamily: 'Oswald'}}>
       <Nav />
       {/* <div style={{marginTop:33}}> */}
       <div>

@@ -9,12 +9,12 @@ import SuperModelMain from "./SuperModelMain";
 
 const Supermodel = () => {
     return (
-        <div style={{fontFamily: 'Concert One'}}>
+        <div style={{fontFamily: 'Oswald'}}>
             <Nav/>
 
             <div className={styles.superNav}>
-                <div style={{fontSize:"13rem",textAlign:"center",fontWeight:"bold"}}>NESCO <br />SUPERMODEL
-                  
+                <div style={{fontSize:"13rem",textAlign:"center",fontWeight:"bold"}}><p className="nesco">NESCO <br />SUPERMODEL
+                </p>
                 </div>
                 <div className={styles.superimg}>
                     <Image src={profile} width={450} height={450} />

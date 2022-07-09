@@ -63,17 +63,6 @@ h1{
 a{
   color:"red"
 }
-
-.singlePost{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  flex-direction: column;
-  font-size: 1.2rem;
-  height: 100vh;
-  
-}
 .single-post{
   display: flex;
   align-items: center;
@@ -191,20 +180,74 @@ border-bottom:1px solid whitesmoke;
   justify-content: center;
   margin: 0 auto;
   padding: auto;
-  flex-direction:column;
-  gap:3em;
+  flex-direction:row;
 }
 .OrderName{
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  gap: 4em;
+  background-color: rgb(233, 212, 212);
+  height: 70vh;
 }
+
+
 
 .home-icon{
   filter:brightness(0);
   filter:invert(1);
   display:block;
   padding-right:1em !important;
+}
+
+/* PRODUCT */
+.Product_container{
+  height: 100vh;
+  margin:0 auto;
+  padding: 0 auto;
+  background-color: rgb(233, 212, 212);
+
+}
+
+.productContainer{
+  display: flex;
+  align-items: center ;
+  flex-direction: column;
+  gap: 1em; 
+  width: 100%;
+}
+.productContainer input{
+  border-radius: 4px;
+  border: 1px solid black;
+  outline: none;
+}
+.prduct_model{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+
+/* RESPONSIVENESS */
+@media (max-width:768px), (max-width:414px) {
+  .footerContainer {
+    font-size: 0.7rem;
+  }
+  .homepageBlogContainer{
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: center center !important;
+    justify-content: center !important;
+    margin-bottom: 1em !important;
+    
+
+  }
+  .homepageBlogContainer p{
+    width: 65%;
+  }
+  .movingCarousel{
+    display: flex;
+    display: none;
+  }
+ 
 }

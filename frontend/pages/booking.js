@@ -19,8 +19,6 @@ const Booking = () => {
     })
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-
         const data = await fetch("http://localhost:5000/api/booking", {
             method: "POST",
             mode: "cors",

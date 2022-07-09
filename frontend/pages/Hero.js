@@ -1,4 +1,6 @@
-import React from "react"
+import React,{ useState, useEffect, useContext }  from "react"
+import AppContext from "../public/images/src/state"
+import axios from "axios";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import dj1 from "../public/images/djcarosel1.jpeg"
@@ -34,6 +36,63 @@ const Hero = () => {
     slidesToScroll: 1,
   }
 
+
+  const { userState, productState } = useContext(AppContext)
+  const [currentUser, setCurrentUser] = userState
+  const [product, setProduct] = productState
+
+  const [formInput, setFormInput] = useState({
+    productImage: "",
+    productColor: "",
+    productSize: "",
+    productQuantity: "",
+    productName: "",
+    productPrice: "",
+    location:"",
+    phoneNumber:"",
+    clientName:"",
+})
+
+
+
+
+
+  const url = ' http://localhost:5000/api/product/'
+
+  useEffect(() => {
+      axios.get(url)
+          .then((res) => {
+              setProduct(res.data)
+          })
+          .catch(err=>{
+              console.log(err)
+          })
+
+  }, [url])
+
+  console.log(product)
+
+ 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = await fetch("http://localhost:5000/api/booking", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formInput)
+    })
+     await data.json()
+        .catch((error) => {
+            console.log(error)
+        })
+    console.log(formInput)
+}
+
+  
+  
 
 
   return (
@@ -113,37 +172,35 @@ const Hero = () => {
 
 
         </Slider>
-      </div>
-      <h1 style={{ textAlign: "center", marginTop: "1em", marginBottom: "1em" }}>Get Your Merchandise Today Available in all sizes</h1>
-      <div className="OrderName">
+      </div>      
+    <h1 style={{ textAlign: "center", marginTop: "1em", marginBottom: "1em" }}>Get Your Merchandise Today Available in all sizes</h1>
+      
+      <div className="OrderName">        
+        <div className={styles.productSingle_Item}>
 
-
+  {product.map(item=>(
         <div>
-        <Image src={blackShirt} width={350} height={350} />
-        <p>NescoBar Tshirt(Black)</p>
-        <p style={{ color: "green" }}>Ksh.2000</p>
-        <button style={{borderRadius:"3px"}} data-bs-toggle="modal" data-bs-target="#staticBackdrop" width={30}>
-          Order
-        </button>
-        </div>
-<div>
-        <Image src={whiteShirt} width={350} height={350} />
-        <p>NescoBar Tshirt(White)</p>
-        <p style={{ color: "green" }}>Ksh.2000</p>
-        <button style={{borderRadius:"3px"}} data-bs-toggle="modal" data-bs-target="#staticBackdrop" width={30}>
-          Order
-        </button>
-        </div>
+          <div className={styles.productItem_container} key={item.id}>
 
-        <div>
-          <Image src={blackShirt} width={350} height={350} />
-          <p>NescoBar Tshirt(Black)</p>
-          <p style={{ color: "green" }}>Ksh.2000</p>
+<div style={{display:"flex",flexDirection:"column"}}>
+          <img src={item.productImage} width={350} height={350} />
+
+          <div style={{display:"flex",justifyContent:"center",gap:"1em",alignItem:"center"}}>
+            <div>
+          <p>{item.productName}</p>  
+          <p>Size:<span style={{ color: "green" }}>{item.productSize}</span></p>
+          </div>
+          <div>
+          <p>Price: <span style={{ color: "green" }}>Ksh.{item.productPrice} </span></p>  
+          <p>Colour: <span style={{ color: "green" }}>{item.productColor}</span></p>  
+          </div> 
+          </div>
+          
           <button style={{borderRadius:"3px"}} type="button" className="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width={30}>
             Order
           </button>
-
-          <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          </div>
+          <div className="modal fade movingCarousel" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
@@ -151,32 +208,57 @@ const Hero = () => {
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div className="modal-body">
-                  <input type="text" placeholder="Your name" />
+                  <input onChange={(e)=>setFormInput({...formInput,clientName:e.target.value })} type="text" placeholder="Your name" />
                 </div>
                 <div className="modal-body">
-                  <input type="text" placeholder="Location" />
+                  <input onChange={(e)=>setFormInput({...formInput,location: e.target.value })} type="text" placeholder="Location" />
                 </div>
 
                 <div className="modal-body">
-                  <input type="text" placeholder="Phone Number" />
+                  <input type="number" onChange={(e)=>setFormInput({...formInput, phoneNumber: e.target.value})} placeholder="Phone Number" />
                 </div>
 
                 <div className="modal-body" >
                   <div className={styles.modalItem}>
                     <div>
-                      <h5>Item</h5>
+                      <h5>Item</h5>                      
+                      <p style={{ color: "green" }}>{item.productName}</p>  
                     </div>
                     <div>
                       <h5>Quantity</h5>
+                      <input type="number" placeholder={item.quantity} />
+
                     </div>
                     <div>
                       <h5>Size</h5>
+                      <select style={{ color: "green" }}>
+                        <select>{item.productSize}</select>
+                        <option>Small</option>
+                        <option>X-Large</option>
+                        <opton>XX-Large</opton>
+                        <option>X-Small</option>
+                        <option>xx-Small</option>
+                      </select>
+
                     </div>
                     <div>
                       <h5>Color</h5>
+                      <select  name="choice" style={{ color: "green" }}>
+                        <option selected>{item.productColor}</option>
+                        <option>Red</option>
+                        <option>Green</option>
+                        <opton>Yellow</opton>
+                        <option>Pink</option>
+                        <option>Black</option>
+                        <option>White</option>
+                      </select>
+                      {/* <p><span style={{ color: "green" }}>{item.productColor}</span></p>   */}
+
                     </div>
                     <div>
                       <h5>Price</h5>
+                      <p><span style={{ color: "green" }}>Ksh.{item.productPrice} </span></p>  
+
                     </div>
 
                   </div>
@@ -186,7 +268,7 @@ const Hero = () => {
                 </div>
 
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-primary">Order</button>
+                  <button type="button" onClick={handleSubmit} className="btn btn-primary">Order</button>
                   <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
                 </div>
@@ -194,6 +276,10 @@ const Hero = () => {
             </div>
           </div>
         </div>
+</div>
+))}
+
+</div>
 
       </div>
 

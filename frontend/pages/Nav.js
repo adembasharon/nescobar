@@ -27,9 +27,9 @@ const Nav = () => {
 
 
                     <div className={styles.NavIcons}>
-                        <div>
-
-                            <p>Find Me On:</p>
+                        <div style={{color:"white"}}>
+                            Find Me On:
+                            {/* <p>Find Me On:</p> */}
                         </div>
                         <div>
                             <Link href="https://twitter.com/nesco_nesco28">
@@ -54,13 +54,15 @@ const Nav = () => {
 
 
                     <div className={styles.navLinks}>
-                        <div><Link href="/booking">
-                            <a target="_blank"><p>Booking</p></a>
+                        <div style={{color:"white"}}><Link href="/booking">
+                            <a target="_blank">Booking</a>
                         </Link>
                         </div>
-                        <div>
+                        <div style={{color:"white"}}>
                             <Link href="/About">
-                                <p>Who's Nesco</p>
+                            <a target="_blank">
+                               Who's Nesco
+                               </a>
                             </Link>
                         </div>
                     </div>
@@ -69,42 +71,34 @@ const Nav = () => {
 
                 {/* sub-Nav */}
                 <div className={styles.subNav}>
-                    {/* <div style={{ display: "flex", flexDirection: "row", alignItems: "center",justifyContent:"center", gap: 4 }}> */}
-                        <div >
-                            {/* <Image src={party} width={27} height={26}/> */}
-                                <Link href="/Dj">
-                                <button>
-                                <Image src={party} width={27} height={26} className="home-icon"/>
-                             Dj Nesco
-                                    </button>
-                            </Link>
-                        </div>
-                    {/* </div> */}
-                    <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }}>
-                                               <div>
-                            <Link href="/Supermodel">
-                                <button>
-                                <Image src={suite} width={27} height={26} className="home-icon"/>
-
-                                    Supermodel
-                                    </button>
-                            </Link>
-                        </div>
+                    <div >
+                        <Link href="/Dj">
+                            <button style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+                                <Image src={party} width={35} height={35} className="home-icon" />
+                                Dj Nesco
+                            </button>
+                        </Link>
                     </div>
-                    <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }}>
-                        <div>
-                        </div>
-                        <div>
-                            <Link href="/Blog">
-                                <button>
-                                <Image src={author} width={27} height={26} className="home-icon" />
+                    <div>
+                        <Link href="/Supermodel">
+                            <button style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+                                <Image src={suite} width={35} height={35} className="home-icon" />
 
-                                    Blog
-                                    </button>
-                            </Link>
-                        </div>
-
+                                Supermodel
+                            </button>
+                        </Link>
                     </div>
+
+                    <div>
+                        <Link href="/Blog">
+                            <button style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+                                <Image src={author} width={35} height={35} className="home-icon" />
+
+                                Blog
+                            </button>
+                        </Link>
+                    </div>
+
 
                 </div>
             </div>

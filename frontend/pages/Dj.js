@@ -22,7 +22,7 @@ const Dj = () => {
                     <p>Bringing you fun at your disposal</p>
                 </div>
 
-                <div className={styles.djImg}>
+                <div className={styles.djImge}>
                     <Image src={nesco} />
                 </div>
             </div>
@@ -37,8 +37,8 @@ const Dj = () => {
                 </Link>
             </div>
 
-
-            <div className={styles.djImageContainer}>
+{/* <div className={styles.djContent}> */}
+            {/* <div className={styles.djImageContainer}> */}
                 <div className={styles.djImg}>
                     <div className={styles.img}>
                         <Image src={djslide1} width={350} height={350} objectFit="cover" />
@@ -61,8 +61,8 @@ const Dj = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-
+            {/* </div> */}
+            {/* </div> */}
 
 
             <Footer />

@@ -7,65 +7,59 @@ import { useRouter } from "next/router";
 
 
 const dashbord = () => {
-    const { userState, postsState } = useContext(AppContext)
+    const { userState, productState } = useContext(AppContext)
     const [currentUser, setCurrentUser] = userState
-    const [posts, setPosts] = postsState
+    const [product, setProduct] = productState
 
     const [profile, setProfile] = useState()
     const [loading, setLoading] = useState(false);
     const [list, setList] = useState()
     const [user, setUser] = useState([])
     const [formInput, setFormInput] = useState({
-        postImage: "",
-        postTitle: "",
-        postSubtitle: "",
-        postDescription: "",
-        postCartegory: ""
+        productImage: "",
+        productColor: "",
+        productSize: "",
+        productQuantity: "",
+        productName: "",
+        productPrice: ""
     })
-
-
     const router = useRouter();
     useEffect(() => {
-
         const user = localStorage.getItem("loggedInUser")
-
         setCurrentUser(JSON.parse(user))
-
         if (JSON.parse(user)[0].isAdmin) {
-            router.push("/admin/dashbord")
+            router.push("/admin/productDashboard")
         } else {
             router.push("/admin/login")
         }
 
     }, [])
-
-
-    const url = 'http://localhost:5000/api/post/'
+    const url = 'http://localhost:5000/api/product/'
     useEffect(() => {
-        getPosts()
+        getProduct()
     }, [])
 
-    const getPosts = () => axios.get(url)
+    const getProduct = () => axios.get(url)
         .then((res) => {
-            setPosts(res.data)
+            setProduct(res.data)
         })
         .catch((err) => {
             console.log(err)
         })
 
     useEffect(() => {
-        localStorage.setItem("posts", JSON.stringify(posts))
-    }, [posts])
+        localStorage.setItem("product", JSON.stringify(product))
+    }, [product])
 
 
     const detail = async (id) => {
-        const data = JSON.parse(localStorage.getItem("posts"));
+        const data = JSON.parse(localStorage.getItem("product"));
         const dataId = data.indexOf(data.find(item => item._id === id))
         data.splice(dataId, 1);
-        setPosts([...data]);
-        localStorage.setItem("posts", JSON.stringify(posts))
+        setProduct([...data]);
+        localStorage.setItem("product", JSON.stringify(product))
 
-        const deletedItem = await fetch(`http://localhost:5000/api/post/${id}`, {
+        const deletedItem = await fetch(`http://localhost:5000/api/product/${id}`, {
             method: "DELETE",
             headers: {
                 "token": `Bearer ${currentUser[0].accessToken}`
@@ -73,12 +67,6 @@ const dashbord = () => {
         })
         console.log(await deletedItem.json())
         console.log(currentUser[0].accessToken)
-
-    }
-
-    const edit = () => {
-        localStorage.setItem("posts", JSON.stringify(posts))
-        posts = JSON.parse(localStorage.getItem("posts"))
 
     }
     const logout = () => {
@@ -94,8 +82,8 @@ const dashbord = () => {
                 <div>
                 </div>
                 <div>
-                    <Link href="/admin/addPost">
-                        <button>Add a new post</button>
+                    <Link href="/admin/addProduct">
+                        <button>Add a new Product</button>
                     </Link>
                 </div>
                 <div>
@@ -106,29 +94,32 @@ const dashbord = () => {
 
             </div>
 
-            {/* DISPLAYED POST */}
+            {/* DISPLAYED PRODUCT */}
             <div className={styles.blog_Items}>
             <div className={styles.blogItems}>
-
-                {posts.map(item => (
-
+                {product.map(item => (
                     <div className={styles.blogContent} key={item.id}>
                         <div className={styles.imgContainer}>
-                            <img src={item.postImage} />
+                            <img src={item.productImage} width={80} height={80} />
                         </div>
-                        <h2>{item.postTitle}</h2>
-                        <p>{item.postSubtitle}</p>
-                        <div dangerouslySetInnerHTML={{ __html: item.postDescription }}></div>
-                        <p>{item.cartegory}</p>
+                        <div>
+                        <h2>{item.productSize}</h2>
+                        </div>
+                        <div>
+                        <p>{item.productPrice}</p>   
+                        </div> 
+                        <div>
+                        <p>{item.productColor}</p>      
+                        </div>
+                        <div>                 
+                        <p>{item.productName}</p>                       
+                        </div>
+             
                         <div style={{display:"flex",gap:3,alignItems:"center"}}>
                         <div>
                             <button style={{backgroundColor:"red"}} type="submit" onClick={(e) => detail(item._id)} disabled={loading ? true : false}>{loading ? "Deleting" : "Delete"}</button>
                         </div>
-                        <div>
-                            <Link href={`editpost/${item.postTitle}`}>
-                                <button onClick={edit}>Edit Post</button>
-                            </Link>
-                        </div>
+                       
                     </div>
                     </div>
                 )
@@ -137,8 +128,8 @@ const dashbord = () => {
 
 
             </div>
-            </div>
         </div >
+        </div>
     )
 }
 

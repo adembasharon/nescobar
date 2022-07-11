@@ -42,7 +42,7 @@ const Hero = () => {
   const [product, setProduct] = productState
 
   const [formInput, setFormInput] = useState({
-    productImage: "",
+    // productImage: "",
     productColor: "",
     productSize: "",
     productQuantity: "",
@@ -75,7 +75,7 @@ const Hero = () => {
  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await fetch("http://localhost:5000/api/booking", {
+    const data = await fetch("http://localhost:5000/api/product", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -231,7 +231,9 @@ const Hero = () => {
                     </div>
                     <div>
                       <h5>Size</h5>
-                      <select style={{ color: "green" }}>
+                      <select style={{ color: "green" }} 
+                       onChange={(e)=>setFormInput({...formInput,productSize:e.target.value })}
+                      >
                         <select>{item.productSize}</select>
                         <option>Small</option>
                         <option>X-Large</option>
@@ -243,7 +245,9 @@ const Hero = () => {
                     </div>
                     <div>
                       <h5>Color</h5>
-                      <select  name="choice" style={{ color: "green" }}>
+                      <select  name="choice" style={{ color: "green" }}
+                       onChange={(e)=>setFormInput({...formInput,productColor:e.target.value })}
+                      >
                         <option selected>{item.productColor}</option>
                         <option>Red</option>
                         <option>Green</option>
@@ -252,7 +256,6 @@ const Hero = () => {
                         <option>Black</option>
                         <option>White</option>
                       </select>
-                      {/* <p><span style={{ color: "green" }}>{item.productColor}</span></p>   */}
 
                     </div>
                     <div>
@@ -287,20 +290,7 @@ const Hero = () => {
       <div className={styles.heroBlogPost}>
         <h1>Latest blog posts</h1>
         <div className="heroblog">
-          {/* {
-          HomepageBlog.map(item => {
-            return (
-              <div className={styles.herosec}>
-                <img src={item.image} width={250} height={250} objectFit="contain" />
-                <h2>{item.title}</h2>
-                <p>{item.subtitle}</p>
-                <button>Continue reading</button>
-              </div>
-
-            )
-          })
-        } */}
-
+      
           <div className="homepageBlogContainer">
             <div>
               <div>

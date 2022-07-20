@@ -175,7 +175,7 @@ const Hero = () => {
       </div>      
     <h1 style={{ textAlign: "center", marginTop: "1em", marginBottom: "1em" }}>Get Your Merchandise Today Available in all sizes</h1>
       
-      <div className="OrderName">        
+      <div className={styles.OrderName}>        
         <div className={styles.productSingle_Item}>
 
   {product.map(item=>(

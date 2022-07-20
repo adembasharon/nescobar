@@ -182,14 +182,7 @@ border-bottom:1px solid whitesmoke;
   padding: auto;
   flex-direction:row;
 }
-.OrderName{
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  background-color: rgb(233, 212, 212);
-  height: 70vh;
-}
+
 
 
 
@@ -230,21 +223,52 @@ border-bottom:1px solid whitesmoke;
 
 /* RESPONSIVENESS */
 @media (max-width:768px), (max-width:414px) {
+
+
+
+
+
+  /* NAV */
+.navLinks{
+  display: none;
+}
+.menubar{
+  display: block;
+}
+
+/* HERO CAROUSEL */
+.sliddinImages{
+  display:none;
+
+}
+
+
+
   .footerContainer {
     font-size: 0.7rem;
   }
   .homepageBlogContainer{
     display: flex;
+    flex-direction: row;
     flex-wrap:wrap ;
-    align-items: center center !important;
-    justify-content: center !important;
-    margin-bottom: 1em !important;
-    
+    align-items: center ;
+    justify-content: center;
+    margin-bottom: 3em;
+    gap: 1em;
+    overflow: hidden;
 
   }
-  .homepageBlogContainer p{
-    width: 65%;
+  .heroblog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    align-items: center ;
+    justify-content: center;
+    margin-top: 3em;
+    gap: 1em;
+    overflow: hidden;
   }
+
   .movingCarousel{
     display: flex;
     display: none;

@@ -7,7 +7,7 @@ import fb from "../public/images/Vectorfb.svg"
 import suite from "../public/images/suite.svg"
 import author from "../public/images/author.svg"
 import party from "../public/images/party.svg"
-
+import menu from "../public/images/menu.svg"
 
 import styles from "../styles/Home.module.css"
 import Link from "next/link"
@@ -51,6 +51,19 @@ const Nav = () => {
                             </Link>
                         </div>
                     </div>
+
+<div className={styles.menubar}>
+<Image src={menu} width={22} height={20}/>
+</div>
+<div className={styles.menuItems}>
+    <select>
+        <option>Blog</option>
+         <option>Dj</option>
+        <option>Supermodel</option>
+<option>Who's Nesco</option>
+    <option>Booking</option>
+    </select>
+</div>
 
 
                     <div className={styles.navLinks}>

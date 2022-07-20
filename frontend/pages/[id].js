@@ -4,8 +4,17 @@ import fb from "../public/images/facebook.svg";
 import twiter from "../public/images/twitter.svg";
 import copy from "../public/images/copy.svg";
 import Nav from "./Nav";
+// import {useRouter} from "next/route"
 
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    TwitterShareButton,
+    TwitterIcon,
+  } from 'next-share';
+  
 
+// const router=useR
 export const getStaticPaths = async () => {
     const res = await fetch("http://localhost:5000/api/post/");
     const data = await res.json()
@@ -64,10 +73,26 @@ const postId = ({ item }) => {
                             <h3>Share To:</h3>
                         </div>
                         <div>
-                            <Image src={fb} width="27" height="27" style={{cursor:"pointer"}}/>
+                            <FacebookShareButton
+                            url={item._id}
+                            // quote={item.id}
+                            hashtag={'#nescobar'}                  
+                            
+                            >
+                                <FacebookIcon/>
+
+                            </FacebookShareButton>
+                            {/* <Image src={fb} width="27" height="27" style={{cursor:"pointer"}}/> */}
                         </div>
                         <div>
-                            <Image src={twiter} width="27" height="27" style={{cursor:"pointer"}}/>
+                            <TwitterShareButton
+                            url={{  id: item._id.toString() 
+                            }}
+                            hashtags={"#Nescobar"}
+                            >
+
+                            </TwitterShareButton>
+                            {/* <Image src={twiter} width="27" height="27" style={{cursor:"pointer"}}/> */}
                         </div>
                         <div>
                             <Image src={copy} width="27" height="27" style={{cursor:"pointer"}}/>

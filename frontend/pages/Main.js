@@ -26,7 +26,7 @@ const Main = () => {
 </video>
 
 
-       <div id="carouselExampleSlidesOnly" className="carousel slide sliddinImages" data-bs-ride="carousel">
+       <div id=" " className="carousel slide sliddinImages" data-bs-ride="carousel">
         <div className="carousel-inner carousel-innerOne">
           <div className="carousel-item carousel-itemOne active">
             <Image src={blog} />

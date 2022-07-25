@@ -1,6 +1,6 @@
 import react from "react"
 import Image from "next/image"
-import logo from "../public/images/LogoBar.png"
+import logo from "../public/images/bglo.png"
 import twitter from "../public/images/Vectortw.svg"
 import insta from "../public/images/Vectorin.svg"
 import fb from "../public/images/Vectorfb.svg"
@@ -21,7 +21,7 @@ const Nav = () => {
                 <div className={styles.navContainer}>
                     <div className={styles.navLogo}>
                         <Link href="/">
-                            <Image src={logo} width={70} height={70} />
+                            <Image src={logo} width={84} height={84} />
                         </Link>
                     </div>
 

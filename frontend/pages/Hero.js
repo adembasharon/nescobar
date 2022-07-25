@@ -21,7 +21,6 @@ import homeOne from "../public/images/blog5.jpg";
 import homeTwo from "../public/images/blog4.jpg";
 import homeThree from "../public/images/blog3.jpg";
 import blackShirt from "../public/images/black.jpeg";
-
 import whiteShirt from "../public/images/whiteShirt.jpeg";
 
 const Hero = () => {
@@ -167,8 +166,8 @@ const Hero = () => {
       >
         Get Your Merchandise Today Available in all sizes
       </h1>
-
-      <div className="OrderName">
+<div className={styles.heroBg}>
+      <div className={styles.OrderName}>
         <div className={styles.productSingle_Item}>
           {product.map((item) => (
             <div>
@@ -453,6 +452,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

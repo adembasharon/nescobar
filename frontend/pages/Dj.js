@@ -53,11 +53,13 @@ const Dj = () => {
                         </div>
 
                     </div>
-
+                    <div className={styles.resp} >
                     <div className={styles.img}>
+                        
                         <Image src={djslide3} width={350} height={350} objectFit="contain" />
                         <div className={styles.desimg}>
                             <p>Happy hour with Dj Nesco.He is the baddest of the baddest</p>
+                        </div>
                         </div>
                     </div>
                 </div>

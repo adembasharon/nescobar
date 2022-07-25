@@ -6,7 +6,7 @@ const Footer = ()=>{
     return(
         <div className={styles.footerCont}>
         <div className={styles.footerContainer}>
-<div>
+<div className={styles.nescoP}>
 <p>Need to have fun with Nesco ? feel<br/>  free to reach out.He likes listening <br/>from people.</p>
 </div>
 

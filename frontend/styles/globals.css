@@ -20,7 +20,9 @@ button{
   justify-content: center;
   text-align: center !important;
   color: white;
-  background-color: #c74c6b;
+  /* background-color: #c74c6b; */
+  background-color: rgb(11, 148, 202);
+
   border-radius: 4px;
   font-size: 1.3rem;
   border-radius: 4px !important;
@@ -275,5 +277,18 @@ border-bottom:1px solid whitesmoke;
     display: flex;
     display: none;
   }
+
+  .single-post{
+    display: flex;
+    flex-direction: column;
+  }
+  
  
+}
+
+@media(max-width:414px){
+  .single-post{
+    display: flex;
+    flex-direction: column;
+  }
 }

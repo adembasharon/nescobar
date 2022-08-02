@@ -21,17 +21,17 @@ const Nav = () => {
                 <div className={styles.navContainer}>
                     <div className={styles.navLogo}>
                         <Link href="/">
-                            <Image src={logo} width={84} height={84} />
+                            <Image src={logo} width={50} height={40}/>
                         </Link>
                     </div>
 
 
                     <div className={styles.NavIcons}>
-                        <div style={{color:"white"}}>
+                        <div style={{color:"black"}}>
                             Find Me On:
                             {/* <p>Find Me On:</p> */}
                         </div>
-                        <div>
+                        <div style={{color:"black"}}>
                             <Link href="https://twitter.com/nesco_nesco28">
                                 <a target="_blank"><Image src={twitter} width={22} height={20} />
                                 </a>
@@ -67,11 +67,11 @@ const Nav = () => {
 
 
                     <div className={styles.navLinks}>
-                        <div style={{color:"white"}}><Link href="/booking">
+                        <div style={{color:"black"}}><Link href="/booking">
                             <a target="_blank">Booking</a>
                         </Link>
                         </div>
-                        <div style={{color:"white"}}>
+                        <div style={{color:"black"}}>
                             <Link href="/About">
                             <a target="_blank">
                                Who's Nesco

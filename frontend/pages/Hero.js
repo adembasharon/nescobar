@@ -167,7 +167,8 @@ const Hero = () => {
         Get Your Merchandise Today Available in all sizes
       </h1>
 <div className={styles.heroBg}>
-      <div className={styles.OrderName}>
+  <div style={{backgroundColor:"#e5f1f5"}}>
+          <div className={styles.OrderName}>
         <div className={styles.productSingle_Item}>
           {product.map((item) => (
             <div>
@@ -369,7 +370,10 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+
           ))}
+          </div>
+
         </div>
       </div>
 

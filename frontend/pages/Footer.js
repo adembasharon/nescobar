@@ -1,18 +1,23 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import logo from "../public/images/bglo.png"
+import Image from "next/image";
 
 const Footer = ()=>{
     return(
         <div className={styles.footerCont}>
         <div className={styles.footerContainer}>
 <div className={styles.nescoP}>
-<p>Need to have fun with Nesco ? feel<br/>  free to reach out.He likes listening <br/>from people.</p>
+    <Image src={logo} width={150} height={110}/>
+
+
+{/* <p>Need to have fun with Nesco ? feel<br/>  free to reach out.He likes listening <br/>from people.</p> */}
 </div>
 
 <div>
 <ul>
-    <h3 style={{color:"yellow"}}>Links</h3>
+    <h3 >Links</h3>
     
     <li>
     <Link href="/Dj">
@@ -35,7 +40,7 @@ const Footer = ()=>{
 
 <div>
     <ul>
-        <h3 style={{color:"yellow"}}>Contact</h3>
+        <h3 >Contact</h3>
         <li>+254 719 149 291</li>
         <li>lorinesotile@gmail.com</li>
         <li>Nairobi,Kenya</li>

@@ -44,9 +44,10 @@ export default function Blog() {
                         <div className={styles.imgContainer}>
                             <img src={item.postImage} />
                         </div>
-                        <h2 style={{fontWeight:"bold"}}>{item.postTitle}</h2>
+                        <div className={styles.resp_Blog}>
+                        <h2>{item.postTitle}</h2>
                         <p>{item.postSubtitle}</p>
-                        
+                        </div>
                         <Link href={`${item._id}`}><button>Continue reading</button></Link>
                 
                     </div>

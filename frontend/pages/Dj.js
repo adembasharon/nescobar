@@ -26,7 +26,7 @@ const Dj = () => {
                     <Image src={nesco} />
                 </div>
             </div>
-
+<div className={styles.resDj}>
             <div className={styles.djforHire}>
                 <h2>
                     Live Performing Dj
@@ -46,12 +46,13 @@ const Dj = () => {
                             <p>Dj Nesco Performing with his equipments</p>
                         </div>
                     </div>
+                    <div className={styles.resp} >
                     <div className={styles.img}>
                         <Image src={djslide2} width={350} height={350} objectFit="contain" />
                         <div className={styles.desimg}>
                             <p>Dj Nesco brings you fun in all places </p>
                         </div>
-
+                        </div>
                     </div>
                     <div className={styles.resp} >
                     <div className={styles.img}>
@@ -61,6 +62,8 @@ const Dj = () => {
                             <p>Happy hour with Dj Nesco.He is the baddest of the baddest</p>
                         </div>
                         </div>
+                        </div>
+
                     </div>
                 </div>
             {/* </div> */}

@@ -21,7 +21,7 @@ const Nav = () => {
                 <div className={styles.navContainer}>
                     <div className={styles.navLogo}>
                         <Link href="/">
-                            <Image src={logo} width={50} height={40}/>
+                            <Image src={logo} width={80} height={67}/>
                         </Link>
                     </div>
 

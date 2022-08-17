@@ -17,11 +17,7 @@ const AddPost=()=>{
         postDescription: "",
         postCartegory: ""
     })
-
-
-
-
-    
+   
     const {userState, postsState} = useContext(AppContext)
     const [currentUser, setCurrentUser] = userState
     const [posts, setPosts] = postsState

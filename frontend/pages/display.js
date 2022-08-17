@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-// import Footer from "./Footer";
-// import Nav from "./Nav";
+
 import styles from "../styles/Home.module.css";
 import axios from 'axios';
 import Link from "next/link";
@@ -8,14 +7,6 @@ import AppContext from "../public/images/src/state";
 
 
 export default function Dispalay() {
-    // const [formInput, setFormInput] = useState({
-    //     postImage: "",
-    //     postTitle: "",
-    //     postSubtitle: "",
-    //     postDescription: "",
-    //     postCartegory:""
-    // })
-
     const {userState, postsState} = useContext(AppContext)
     const [currentUser, setCurrentUser] = userState
     const [posts, setPosts] = postsState
